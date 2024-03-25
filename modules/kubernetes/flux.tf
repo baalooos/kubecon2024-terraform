@@ -22,6 +22,7 @@ provider "flux" {
   }
   git = {
     url = "ssh://git@github.com/${var.github_org}/${var.github_repository}.git"
+    branch = "kubecon2024-live"
     ssh = {
       username    = "git"
       private_key = tls_private_key.flux.private_key_pem
@@ -30,7 +31,7 @@ provider "flux" {
 }
 
 resource "flux_bootstrap_git" "this" {
-  depends_on = [github_repository_deploy_key.this]
+  depends_on = [github_repository_deploy_key.this, null_resource.kubeconfig]
 
   path = "clusters/kubecon2024"
 }

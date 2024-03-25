@@ -7,7 +7,7 @@ variable "kubecon2024_core" {
     project_id = "1b278a9d-c985-4c38-9c5e-95a61514f067"
     production = false
     //env name
-    env_name = "kubecon"
+    env_name = "kubecon-live"
     //conditional deployments
     region = "fr-par"
     // Main zone
