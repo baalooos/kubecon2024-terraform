@@ -2,16 +2,17 @@ terraform {
   required_providers {
     scaleway = {
       source  = "scaleway/scaleway"
-      version = "2.34.0"
+      version = "2.34"
     }
   }
 
   // State storage
   backend "s3" {
     // Change this.
-    bucket = "kubecon-demo-automation-2024"
+    profile = "demo-flux2"
+    bucket = "demo-flux2-deploy"
     // Path in the S3 bucket
-    key = "kubecon2024/dev/terraform.tfstate"
+    key = "kubecon2024/flux2/terraform.tfstate"
     // Region of the bucket
     region = "fr-par"
     // Change the endpoint if we change the region
@@ -35,6 +36,5 @@ provider "scaleway" {
   region = "fr-par"
   // Replace with customer organization id
   organization_id = "79a00b89-8d66-471f-888a-758f48a8e039"
-  project_id = "1b278a9d-c985-4c38-9c5e-95a61514f067"
-  profile = "kubecon2024"
+  project_id = "d0377c53-93b5-4ce5-9150-d51a5153e218"
 }

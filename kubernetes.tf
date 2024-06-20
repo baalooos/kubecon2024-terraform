@@ -3,7 +3,7 @@ module "kubernetes" {
 
   region     = var.kubecon2024_core.region
   env_name   = var.kubecon2024_core.env_name
-  project_id = var.kubecon2024_core.project_id
+  project_id = var.project_id
   kube_param = var.kubecon2024_kube
 
   private_network = scaleway_vpc_private_network.pn

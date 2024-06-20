@@ -4,10 +4,9 @@ variable "kubecon2024_core" {
   type = map(string)
 
   default = {
-    project_id = "1b278a9d-c985-4c38-9c5e-95a61514f067"
     production = false
     //env name
-    env_name = "kubecon"
+    env_name = "demo-flux2"
     //conditional deployments
     region = "fr-par"
     // Main zone
@@ -90,6 +89,10 @@ variable "kubecon2024_kube" {
     // Ip to whitelist
     allowed_cidr = "['0.0.0.0/0']"
   }
+}
+
+variable "project_id" {
+  type = string
 }
 
 // Flux

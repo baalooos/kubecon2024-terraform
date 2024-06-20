@@ -2,7 +2,7 @@ terraform {
   required_providers {
     scaleway = {
       source  = "scaleway/scaleway"
-      version = "2.34.0"
+      version = "2.34"
     }
     kubernetes = {
       source = "hashicorp/kubernetes"
@@ -25,7 +25,7 @@ provider "kubernetes" {
   )
 }
 
-provider "helm" {
+provider "helm" {:q
   kubernetes {
     host  = null_resource.kubeconfig.triggers.host
     token = null_resource.kubeconfig.triggers.token
